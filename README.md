@@ -17,3 +17,12 @@ Klipper Config files for my 3d printer.
 - Raspberry Pi 4b 8gb - Heatsink Fan Kit
 - Official 7" Raspberry Pi display 
 - Makerhawk Pi IR Camera 5mp OV5647
+
+Important Links
+
+Klipper Install & Config          - https://klipper3d.org/
+Mainsail OS                       - https://docs-os.mainsail.xyz/
+Klipper Screen                    - https://klipperscreen.readthedocs.io/en/latest/
+KUSBA Accelerometer               - https://github.com/xbst/KUSBA
+Octoeverywhere                    - https://octoeverywhere.com/
+Obico (The Spaghetti Detective)   - https://obico.io/
