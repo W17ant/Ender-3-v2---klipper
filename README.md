@@ -1,9 +1,9 @@
 # Ender-3-v2---klipper
 Config files for ender 3 v2 
 
-#####################################################################
+[Printer]
 Ender 3 V2 with BLTouch
-#####################################################################
+
  Specs:
 - 3DFused linear rails X/Y/Z
 - BLTouch
