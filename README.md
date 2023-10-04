@@ -20,15 +20,20 @@ Klipper Config files for my 3d printer.
 
 ### Important Links
 
-Klipper Install & Config          
 - https://klipper3d.org/
-Mainsail OS
+Klipper Install & Config          
+
 - https://docs-os.mainsail.xyz/
-Klipper Screen
+Mainsail OS
+
 - https://klipperscreen.readthedocs.io/en/latest/
-KUSBA Accelerometer
+Klipper Screen
+
 - https://github.com/xbst/KUSBA
-Octoeverywhere
+KUSBA Accelerometer
+
 - https://octoeverywhere.com/
-Obico (The Spaghetti Detective)
+Octoeverywhere
+
 - https://obico.io/
+Obico (The Spaghetti Detective)
