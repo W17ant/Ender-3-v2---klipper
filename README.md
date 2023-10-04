@@ -1,6 +1,7 @@
 ## Ender-3-v2---klipper
 Config files for ender 3 v2 
 
+![Ender 3 v2](https://github.com/W17ant/Ender-3-v2---klipper/assets/147003220/b7940b86-0989-4038-b4c2-7b7211fa7141)
 
 ### [Printer] Ender 3 V2 with BLTouch
 
