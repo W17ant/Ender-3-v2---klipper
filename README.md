@@ -37,3 +37,6 @@ Octoeverywhere
 
 - https://obico.io/
 Obico (The Spaghetti Detective)
+
+- https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging
+Klipper-Adaptive-Meshing-Purging
