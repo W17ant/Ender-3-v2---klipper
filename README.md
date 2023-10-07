@@ -20,6 +20,9 @@ Klipper Config files for my 3d printer.
 
 ### Important Links
 
+- https://www.raspberrypi.com/software/
+Raspberry Pi Imager
+
 - https://klipper3d.org/
 Klipper Install & Config          
 
