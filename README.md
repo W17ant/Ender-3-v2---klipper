@@ -43,3 +43,6 @@ Obico (The Spaghetti Detective)
 
 - https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging
 Klipper-Adaptive-Meshing-Purging
+
+- https://github.com/Donkie/Spoolman
+Spoolman - 3d printer spool manager
