@@ -6,6 +6,7 @@ Klipper Config files for my 3d printer.
 ### [Printer] Ender 3 V2 with BLTouch
 
  Specs:
+- stock 4.2.2 board
 - 3DFused linear rails X/Y/Z
 - BLTouch
 - Physical endstops on XY
