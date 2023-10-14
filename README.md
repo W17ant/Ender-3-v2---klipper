@@ -17,7 +17,7 @@ Klipper Config files for my 3d printer.
 - Dual Z 1.8 Degree Creality stepper motors
 - Raspberry Pi 4b 8gb - Heatsink Fan Kit
 - Official 7" Raspberry Pi display 
-- Makerhawk Pi IR Camera 5mp OV5647
+- ELP 1080P USB3.0 Webcam IMX291 Sensor 50fps,3.6mm Lens
 
 ### Important Links
 
