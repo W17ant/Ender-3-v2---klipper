@@ -24,11 +24,17 @@ Klipper Config files for my 3d printer.
 - https://www.raspberrypi.com/software/
 Raspberry Pi Imager
 
+- https://github.com/dw-0/kiauh
+- Kiauh Install Manager
+
 - https://klipper3d.org/
 Klipper Install & Config          
 
 - https://docs-os.mainsail.xyz/
 Mainsail OS
+
+- https://crowsnest.mainsail.xyz/
+Crowsnest (Camera Streaming)
 
 - https://klipperscreen.readthedocs.io/en/latest/
 Klipper Screen
