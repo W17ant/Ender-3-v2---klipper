@@ -18,6 +18,8 @@ Klipper Config files for my 3d printer.
 - Raspberry Pi 4b 8gb - Heatsink Fan Kit
 - Official 7" Raspberry Pi display 
 - ELP 1080P USB3.0 Webcam IMX291 Sensor 50fps,3.6mm Lens
+- Trianglelabs filament runout sensor
+- 12v 6000k COB LED strip around frame (Model: COM 480LED/M)
 
 ### Important Links
 
