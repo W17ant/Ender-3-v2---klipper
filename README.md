@@ -1,57 +1,126 @@
-## Ender-3-v2---klipper
-Klipper Config files for my 3d printer.
+# Ender 3 V2 Klipper Configuration
+
+Klipper configuration files for my heavily modified Ender 3 V2 3D printer.
 
 ![Ender 3 v2](https://github.com/W17ant/Ender-3-v2---klipper/assets/147003220/b7940b86-0989-4038-b4c2-7b7211fa7141)
 
-### [Printer] Ender 3 V2 with BLTouch
+## Table of Contents
 
- Specs:
-- Stock Creality 4.2.2 board
-- 3DFused linear rails X/Y/Z
-- BLTouch
-- Physical endstops on XY
-- Creality Sprite Pro hot end
-- Noctua 12v NF-A9-14 PWM Silent fan - PSU fan
-- Noctua 12v NF-A9-14 PWM Silent fan - Mainboard fan
-- KUSBA Accelerometer - ADXL345 Rampon Firmware
-- Dual Z 1.8 Degree Creality stepper motors
-- Raspberry Pi 4b 8gb - Heatsink Fan Kit
-- Official 7" Raspberry Pi display 
-- ELP 1080P USB3.0 Webcam IMX291 Sensor 50fps,3.6mm Lens
-- Trianglelabs filament runout sensor
-- 12v 6000k COB LED strip around frame (Model: COB 480LED/M)
+- [Hardware Specs](#hardware-specs)
+- [Configuration Files](#configuration-files)
+- [Slicer Setup](#slicer-setup)
+- [Macros](#macros)
+- [Input Shaper Results](#input-shaper-results)
+- [Useful Links](#useful-links)
 
-### Important Links
+## Hardware Specs
 
-- https://www.raspberrypi.com/software/
-Raspberry Pi Imager
+| Component | Details |
+|-----------|---------|
+| **Mainboard** | Stock Creality 4.2.2 (STM32F103) |
+| **Motion** | 3DFused linear rails X/Y/Z |
+| **Z-Axis** | Dual Z with 1.8° Creality steppers |
+| **Hotend** | Creality Sprite Pro Extruder |
+| **Probe** | BLTouch (physical endstops on XY) |
+| **Accelerometer** | KUSBA ADXL345 (Rampon Firmware) |
+| **Filament Sensor** | Trianglelab runout sensor |
+| **Cooling** | Noctua NF-A9-14 PWM (PSU + Mainboard) |
+| **Lighting** | 12V 6000K COB LED strip (480 LED/m) |
+| **Camera** | ELP 1080P USB3.0 (IMX291, 50fps) |
+| **Host** | Raspberry Pi 4B 8GB + Official 7" Display |
 
-- https://github.com/dw-0/kiauh
-Kiauh Install Manager
+## Configuration Files
 
-- https://klipper3d.org/
-Klipper Install & Config          
+| File | Description |
+|------|-------------|
+| `printer.cfg` | Main printer configuration - steppers, bed, extruder, probe |
+| `macro.cfg` | Print macros - START_PRINT, END_PRINT, filament handling |
+| `KAMP_Settings.cfg` | Klipper Adaptive Meshing & Purging settings |
+| `Moonraker.conf` | Moonraker API server configuration |
+| `crowsnest.conf` | Camera streaming configuration |
+| `KlipperScreen.conf` | Touchscreen UI configuration |
+| `timelapse.cfg` | Timelapse recording settings |
+| `adxlmcu.cfg` | ADXL345 accelerometer configuration |
 
-- https://docs-os.mainsail.xyz/
-Mainsail OS
+## Slicer Setup
 
-- https://crowsnest.mainsail.xyz/
-Crowsnest (Camera Streaming)
+### OrcaSlicer / PrusaSlicer / SuperSlicer
 
-- https://klipperscreen.readthedocs.io/en/latest/
-Klipper Screen
+**Start G-code:**
+```gcode
+START_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer]
+```
 
-- https://github.com/xbst/KUSBA
-KUSBA Accelerometer
+**End G-code:**
+```gcode
+END_PRINT
+```
 
-- https://octoeverywhere.com/
-Octoeverywhere
+## Macros
 
-- https://obico.io/
-Obico (The Spaghetti Detective)
+### Print Control
+| Macro | Description |
+|-------|-------------|
+| `START_PRINT` | Heats bed/nozzle, homes, creates mesh, purges |
+| `END_PRINT` | Parks head, cools down, clears mesh |
+| `PAUSE` | Pauses print and parks toolhead |
+| `RESUME` | Resumes paused print |
+| `CANCEL_PRINT` | Cancels current print |
 
-- https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging
-Klipper-Adaptive-Meshing-Purging
+### Filament
+| Macro | Description |
+|-------|-------------|
+| `LOAD_FILAMENT` | Loads filament into extruder |
+| `UNLOAD_FILAMENT` | Unloads filament from extruder |
+| `M600` | Filament change (pause + unload) |
 
-- https://github.com/Donkie/Spoolman
-Spoolman - 3d printer spool manager
+### Calibration
+| Macro | Description |
+|-------|-------------|
+| `G29` | Home + bed mesh + park |
+| `BED_LEVELING` | Heat bed and run screw tilt adjust |
+| `Z_PROBE_CALIBRATE` | Calibrate Z offset with heated bed |
+| `PID_EXTRUDER` | PID tune extruder (default 210C) |
+| `PID_BED` | PID tune bed (default 60C) |
+
+### Preheat
+| Macro | Extruder | Bed |
+|-------|----------|-----|
+| `PREHEAT_PLA` | 150C | 60C |
+| `PREHEAT_PETG` | 170C | 60C |
+| `PREHEAT_ABS` | 180C | 80C |
+| `PREHEAT_BED_ONLY` | - | 60C |
+| `COOL` | Off | Off |
+
+## Input Shaper Results
+
+Calibrated using KUSBA ADXL345 accelerometer.
+
+| Axis | Shaper Type | Frequency |
+|------|-------------|-----------|
+| X | EI | 69.6 Hz |
+| Y | MZV | 30.2 Hz |
+
+![X-Axis Shaper](shaper_calibrate_x.png)
+![Y-Axis Shaper](shaper_calibrate_y.png)
+
+## Useful Links
+
+### Setup & Installation
+- [Raspberry Pi Imager](https://www.raspberrypi.com/software/) - Flash OS to SD card
+- [KIAUH](https://github.com/dw-0/kiauh) - Klipper Installation And Update Helper
+- [Klipper Documentation](https://klipper3d.org/) - Official Klipper docs
+- [Mainsail OS](https://docs-os.mainsail.xyz/) - Mainsail web interface
+
+### Extensions
+- [KAMP](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) - Adaptive Meshing & Purging
+- [Crowsnest](https://crowsnest.mainsail.xyz/) - Camera streaming
+- [KlipperScreen](https://klipperscreen.readthedocs.io/) - Touchscreen interface
+- [Spoolman](https://github.com/Donkie/Spoolman) - Filament spool manager
+
+### Remote Access
+- [OctoEverywhere](https://octoeverywhere.com/) - Remote access & notifications
+- [Obico](https://obico.io/) - AI failure detection (The Spaghetti Detective)
+
+### Hardware
+- [KUSBA](https://github.com/xbst/KUSBA) - USB accelerometer for input shaping
