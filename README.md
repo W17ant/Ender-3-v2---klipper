@@ -83,6 +83,13 @@ END_PRINT
 | `PID_EXTRUDER` | PID tune extruder (default 210C) |
 | `PID_BED` | PID tune bed (default 60C) |
 
+### Utility
+| Macro | Description |
+|-------|-------------|
+| `CG28` | Conditional home - only homes if not already homed |
+| `HEAT_SOAK` | Heat bed and wait for thermal stabilization (default 10 min) |
+| `M73` | Updates display with print progress percentage |
+
 ### Preheat
 | Macro | Extruder | Bed |
 |-------|----------|-----|
