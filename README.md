@@ -35,12 +35,27 @@ Klipper configuration files for my heavily modified Ender 3 V2 3D printer.
 |------|-------------|
 | `printer.cfg` | Main printer configuration - steppers, bed, extruder, probe |
 | `macro.cfg` | Print macros - START_PRINT, END_PRINT, filament handling |
-| `KAMP_Settings.cfg` | Klipper Adaptive Meshing & Purging settings |
-| `Moonraker.conf` | Moonraker API server configuration |
-| `crowsnest.conf` | Camera streaming configuration |
+| `mainsail.cfg` | Mainsail client macros (owns PAUSE/RESUME/CANCEL_PRINT, virtual_sdcard) |
+| `KAMP_Settings.cfg` + `KAMP/` | Klipper Adaptive Meshing & Purging settings |
+| `moonraker.conf` | Moonraker API server configuration |
+| `moonraker_obico_macros.cfg` | Obico first-layer scan macros |
+| `moonraker-obico-update.cfg` | Obico update_manager entry |
+| `octoeverywhere-system.cfg` / `octoeverywhere.conf` | OctoEverywhere remote access |
+| `crowsnest.conf` / `sonar.conf` | Camera streaming / link monitoring |
 | `KlipperScreen.conf` | Touchscreen UI configuration |
 | `timelapse.cfg` | Timelapse recording settings |
 | `adxlmcu.cfg` | ADXL345 accelerometer configuration |
+
+> **Not tracked** (see `.gitignore`): `moonraker-obico.cfg` (contains the Obico
+> account `auth_token` — keep it off the public repo), the `Spoolman/`
+> database and rotated `*.log` files.
+>
+> **Section ownership:** `PAUSE`, `RESUME`, `CANCEL_PRINT` and `pause_resume`
+> are defined once, in `mainsail.cfg`. They were previously also redefined in
+> `macro.cfg`; since Klipper parses with `strict=False`, the last include
+> silently won, making behaviour depend on include order. The duplicates were
+> removed so the maintained mainsail client macros are authoritative. `G29`
+> lives once in `printer.cfg`.
 
 ## Slicer Setup
 

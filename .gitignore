@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Secrets — Obico account auth_token lives here; never commit
+moonraker-obico.cfg
+
+# Runtime state / large binaries, not configuration
+Spoolman/
+*.log
+*.log.*
+*.db
