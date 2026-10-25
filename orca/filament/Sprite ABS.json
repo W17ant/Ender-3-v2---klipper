@@ -1,0 +1,62 @@
+{
+    "type": "filament",
+    "name": "Sprite ABS",
+    "inherits": "My Generic ABS",
+    "from": "User",
+    "filament_settings_id": [
+        "Sprite ABS"
+    ],
+    "filament_type": [
+        "ABS"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "default_filament_colour": [
+        "#E0E0E0"
+    ],
+    "nozzle_temperature": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "hot_plate_temp": [
+        "100"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "100"
+    ],
+    "textured_plate_temp": [
+        "100"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "100"
+    ],
+    "cool_plate_temp": [
+        "100"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "100"
+    ],
+    "filament_flow_ratio": [
+        "0.93"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "fan_max_speed": [
+        "15"
+    ],
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "filament_notes": "ABS. Enclosure strongly recommended; fan kept low to stop warping.",
+    "version": "1.6.1.0"
+}

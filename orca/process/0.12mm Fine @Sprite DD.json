@@ -1,0 +1,15 @@
+{
+    "type": "process",
+    "name": "0.12mm Fine @Sprite DD",
+    "inherits": "0.12mm Fine @MyKlipper",
+    "from": "User",
+    "print_settings_id": "0.12mm Fine @Sprite DD",
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "version": "1.6.1.0",
+    "notes": "Detail parts.",
+    "wall_loops": "3",
+    "sparse_infill_density": "15%",
+    "enable_support": "0"
+}

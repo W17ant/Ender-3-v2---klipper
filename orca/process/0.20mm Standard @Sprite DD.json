@@ -1,0 +1,16 @@
+{
+    "type": "process",
+    "name": "0.20mm Standard @Sprite DD",
+    "inherits": "0.20mm Standard @MyKlipper",
+    "from": "User",
+    "print_settings_id": "0.20mm Standard @Sprite DD",
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "version": "1.6.1.0",
+    "notes": "Everyday profile.",
+    "wall_loops": "3",
+    "sparse_infill_density": "20%",
+    "enable_support": "0",
+    "skirt_loops": "2"
+}

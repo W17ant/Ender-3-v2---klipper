@@ -1,0 +1,71 @@
+{
+    "type": "filament",
+    "name": "Sprite PETG",
+    "inherits": "My Generic PETG",
+    "from": "User",
+    "filament_settings_id": [
+        "Sprite PETG"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "default_filament_colour": [
+        "#FF0000"
+    ],
+    "nozzle_temperature": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "245"
+    ],
+    "hot_plate_temp": [
+        "75"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "75"
+    ],
+    "textured_plate_temp": [
+        "75"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "75"
+    ],
+    "cool_plate_temp": [
+        "75"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "75"
+    ],
+    "filament_flow_ratio": [
+        "0.95"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "fan_max_speed": [
+        "50"
+    ],
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "filament_notes": "PETG. Slightly longer, slower retraction than PLA. Glue stick on smooth PEI as a release layer.",
+    "version": "1.6.1.0",
+    "filament_start_gcode": [
+        "; Sprite PETG\nSET_RETRACTION RETRACT_LENGTH=0.8 RETRACT_SPEED=40\n"
+    ],
+    "filament_end_gcode": [
+        "; restore printer.cfg retraction\nSET_RETRACTION RETRACT_LENGTH=0.6 RETRACT_SPEED=85\n"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ]
+}

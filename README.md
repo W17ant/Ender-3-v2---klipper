@@ -63,8 +63,38 @@ Klipper configuration files for my heavily modified Ender 3 V2 3D printer.
 
 **Start G-code:**
 ```gcode
-START_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer]
+START_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer] MATERIAL=[filament_type]
 ```
+
+`MATERIAL` picks the per-material pressure advance in `START_PRINT`. Without these
+parameters the macro falls back to 60C bed / 210C nozzle / PLA pressure advance.
+
+### OrcaSlicer presets (`orca/`)
+
+Ready-made presets for this printer (Sprite Pro direct drive, 0.4 nozzle). Import with
+**File > Import > Import Configs...** and select the `.json` files, printer first.
+
+| Folder | Presets |
+|--------|---------|
+| `orca/machine` | `MyKlipper 0.4 nozzle - Sprite DD` (start G-code passes temps + material) |
+| `orca/filament` | PLA, PLA+, PLA HS, PETG, ABS, ASA, TPU 95A, eSUN TPU LW (foam) |
+| `orca/process` | 0.12 Fine, 0.20 Standard, 0.20 Strong, 0.28 Draft, 0.20 TPU, 0.20 Stamproller TPU ring |
+
+| Filament | Nozzle | Bed | Max flow | Retraction |
+|----------|--------|-----|----------|------------|
+| PLA | 210 (215 first) | 60 | 12 mm3/s | printer default 0.6 |
+| PLA+ | 215 (220 first) | 60 | 14 mm3/s | printer default 0.6 |
+| PLA HS | 225 | 60 | 20 mm3/s | printer default 0.6 |
+| PETG | 240 (245 first) | 75 | 10 mm3/s | 0.8 @ 40 |
+| ABS | 245 (250 first) | 100 | 12 mm3/s | printer default 0.6 |
+| ASA | 250 (255 first) | 100 | 11 mm3/s | printer default 0.6 |
+| TPU 95A | 225 (230 first) | 45 | 3.5 mm3/s | 0.4 @ 30 |
+| eSUN TPU LW (foam) | 230 | 50 | 3 mm3/s, flow 0.75 | off |
+
+Retraction is firmware retraction (`[firmware_retraction]`, G10/G11), so Orca's own
+retraction length is ignored. Filaments that need a different value set it with
+`SET_RETRACTION` in their start G-code and restore `0.6 @ 85` in their end G-code.
+ABS and ASA want an enclosure.
 
 **End G-code:**
 ```gcode

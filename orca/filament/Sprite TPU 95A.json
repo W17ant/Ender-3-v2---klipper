@@ -1,0 +1,71 @@
+{
+    "type": "filament",
+    "name": "Sprite TPU 95A",
+    "inherits": "My Generic TPU",
+    "from": "User",
+    "filament_settings_id": [
+        "Sprite TPU 95A"
+    ],
+    "filament_type": [
+        "TPU"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "default_filament_colour": [
+        "#FF8800"
+    ],
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "hot_plate_temp": [
+        "45"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "45"
+    ],
+    "textured_plate_temp": [
+        "45"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "45"
+    ],
+    "cool_plate_temp": [
+        "45"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "45"
+    ],
+    "filament_flow_ratio": [
+        "1.0"
+    ],
+    "filament_max_volumetric_speed": [
+        "3.5"
+    ],
+    "fan_min_speed": [
+        "50"
+    ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "close_fan_the_first_x_layers": [
+        "1"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "filament_notes": "Standard 95A TPU on the direct-drive Sprite. Print slow (25-35 mm/s).",
+    "version": "1.6.1.0",
+    "filament_start_gcode": [
+        "; Sprite TPU 95A\nSET_RETRACTION RETRACT_LENGTH=0.4 RETRACT_SPEED=30\n"
+    ],
+    "filament_end_gcode": [
+        "; restore printer.cfg retraction\nSET_RETRACTION RETRACT_LENGTH=0.6 RETRACT_SPEED=85\n"
+    ],
+    "filament_retraction_length": [
+        "0.4"
+    ]
+}

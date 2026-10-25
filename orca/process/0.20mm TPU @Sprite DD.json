@@ -1,0 +1,25 @@
+{
+    "type": "process",
+    "name": "0.20mm TPU @Sprite DD",
+    "inherits": "0.20mm Standard @MyKlipper",
+    "from": "User",
+    "print_settings_id": "0.20mm TPU @Sprite DD",
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "version": "1.6.1.0",
+    "notes": "Flexible filament, slow and steady.",
+    "wall_loops": "3",
+    "sparse_infill_density": "20%",
+    "enable_support": "0",
+    "outer_wall_speed": "30",
+    "inner_wall_speed": "30",
+    "sparse_infill_speed": "35",
+    "internal_solid_infill_speed": "35",
+    "top_surface_speed": "30",
+    "gap_infill_speed": "30",
+    "bridge_speed": "20",
+    "initial_layer_speed": "15",
+    "initial_layer_infill_speed": "15",
+    "travel_speed": "150"
+}
