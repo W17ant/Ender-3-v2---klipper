@@ -77,7 +77,7 @@ Ready-made presets for this printer (Sprite Pro direct drive, 0.4 nozzle). Impor
 | Folder | Presets |
 |--------|---------|
 | `orca/machine` | `MyKlipper 0.4 nozzle - Sprite DD` (start G-code passes temps + material) |
-| `orca/filament` | PLA, PLA+, PLA HS, PETG, ABS, ASA, TPU 95A, eSUN TPU LW (foam) |
+| `orca/filament` | PLA, PLA+, PLA HS, Silk PLA, Matte PLA, Wood PLA, PLA-CF, PETG, PETG-CF, ABS, ASA, TPU 95A, TPU 85A, eSUN TPU LW (foam) |
 | `orca/process` | 0.12 Fine, 0.20 Standard, 0.20 Strong, 0.28 Draft, 0.20 TPU, 0.20 Stamproller TPU ring |
 
 | Filament | Nozzle | Bed | Max flow | Retraction |
@@ -90,11 +90,18 @@ Ready-made presets for this printer (Sprite Pro direct drive, 0.4 nozzle). Impor
 | ASA | 250 (255 first) | 100 | 11 mm3/s | printer default 0.6 |
 | TPU 95A | 225 (230 first) | 45 | 3.5 mm3/s | 0.4 @ 30 |
 | eSUN TPU LW (foam) | 230 | 50 | 3 mm3/s, flow 0.75 | off |
+| TPU 85A | 220 (225 first) | 40 | 2 mm3/s | off |
+| Silk PLA | 220 (225 first) | 60 | 8 mm3/s | printer default 0.6 |
+| Matte PLA | 215 (220 first) | 60 | 12 mm3/s | printer default 0.6 |
+| Wood PLA | 205 (210 first) | 60 | 10 mm3/s | printer default 0.6 |
+| PLA-CF | 220 (225 first) | 60 | 10 mm3/s | printer default 0.6 |
+| PETG-CF | 245 (250 first) | 75 | 8 mm3/s | 0.8 @ 40 |
 
 Retraction is firmware retraction (`[firmware_retraction]`, G10/G11), so Orca's own
 retraction length is ignored. Filaments that need a different value set it with
 `SET_RETRACTION` in their start G-code and restore `0.6 @ 85` in their end G-code.
-ABS and ASA want an enclosure.
+ABS and ASA want an enclosure. CF filaments need the hardened steel nozzle (fitted);
+nylon and PC are out of range (hotend `max_temp: 265`).
 
 **End G-code:**
 ```gcode

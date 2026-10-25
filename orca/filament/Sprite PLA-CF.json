@@ -1,0 +1,62 @@
+{
+    "type": "filament",
+    "name": "Sprite PLA-CF",
+    "inherits": "My Generic PLA-CF",
+    "from": "User",
+    "filament_settings_id": [
+        "Sprite PLA-CF"
+    ],
+    "filament_type": [
+        "PLA-CF"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "default_filament_colour": [
+        "#333333"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "cool_plate_temp": [
+        "60"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_flow_ratio": [
+        "0.96"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "close_fan_the_first_x_layers": [
+        "1"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "filament_notes": "Carbon-fibre PLA. Needs the hardened steel nozzle (fitted). Dry it first; stiff, matte finish.",
+    "version": "1.6.1.0"
+}

@@ -1,0 +1,62 @@
+{
+    "type": "filament",
+    "name": "Sprite Silk PLA",
+    "inherits": "My Generic PLA",
+    "from": "User",
+    "filament_settings_id": [
+        "Sprite Silk PLA"
+    ],
+    "filament_type": [
+        "PLA"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "default_filament_colour": [
+        "#C9A227"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "cool_plate_temp": [
+        "60"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "8"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "close_fan_the_first_x_layers": [
+        "1"
+    ],
+    "compatible_printers": [
+        "MyKlipper 0.4 nozzle - Sprite DD"
+    ],
+    "filament_notes": "Silk/shiny PLA. Hotter and slower (8 mm3/s cap) keeps the shine; slow outer walls help most.",
+    "version": "1.6.1.0"
+}
