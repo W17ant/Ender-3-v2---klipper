@@ -47,7 +47,7 @@
         "10",
         "12"
     ],
-    "machine_start_gcode": "M117 \nSTART_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer] MATERIAL=[filament_type]",
+    "machine_start_gcode": "M117 \nSTART_PRINT BED_TEMP=[bed_temperature_initial_layer_single] EXTRUDER_TEMP=[nozzle_temperature_initial_layer] MATERIAL=[filament_type]\nSET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]",
     "max_layer_height": [
         "0.36"
     ],
@@ -75,5 +75,6 @@
     "wipe": [
         "0"
     ],
-    "type": "machine"
+    "type": "machine",
+    "layer_change_gcode": "SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}"
 }
